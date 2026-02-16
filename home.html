@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+      <div class="card">
+    <h2>В каком фанк использовался данный трек?</h2>
+
+    <!-- МУЗЫКА УШУЛ ЖЕРГЕ КОШУЛАТ -->
+    <div class="music-box">
+      <iframe frameborder="0" allow="clipboard-write" style="border:none;width:614px;height:244px;" width="614" height="244" src="https://music.yandex.ru/iframe/album/38189502/track/142836528">Слушайте <a href="https://music.yandex.ru/album/38189502/track/142836528?utm_source=web&utm_medium=copy_link">LOUCURA LETAL</a> — <a href="https://music.yandex.ru/artist/4209597">NAKAMA</a> на Яндекс Музыке</iframe>
+    </div>
+
+    <div class="buttons">
+    <button onclick="answer('LOUCURA LETAL', 'question2')"><a href="room.html">LOUCURA LETAL</a></button>
+    <button onclick="answer('NO ERA AMOR', 'question2')">NO ERA AMOR</button>
+    <button onclick="answer('GOZALO', 'question2')">GOZALO</button>
+  </div>
+
+    <p id="result"></p>
+  </div>
+    
+  <script>
+  const correctAnswers = {
+  'question2': 'LOUCURA LETAL',
+};
+
+function answer(value, question) {
+  if (correctAnswers[question] === value) {
+    alert('Правильно! 🌸');
+  } else {
+    alert('Неправильно 😅');
+  }
+}
+
+function playMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.play();
+  }
+}
+
+function pauseMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.pause();
+  }
+}
+
+</script>
+</body>
+</html>

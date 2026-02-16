@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <div class="card">
+    <h2>В каком фанк использовался данный трек?</h2>
+
+    <!-- ВИДЕО УШУЛ ЖЕРГЕ КОШУЛАТ -->
+    <div class="video-box">
+      <!-- iframe же ссылка өзүң коёсуң -->
+      <div class="video-box">
+  <video width="100%" height="100%" controls>
+    <source src="Nakama, Mc Staff - SEM SAНDA.mp4" type="video/mp4">
+    Браузер видео колдобойт
+  </video>
+</div>
+
+    </div>
+
+    <div class="buttons">
+      <button onclick="answer('SEMPERO', 'question3')">SEMPERO</button>
+      <button onclick="answer('SEM SAIDA', 'question3')"><a href="congrulations.html">SEM SAIDA</a></button>
+      <button onclick="answer('MONTAGEM RUGADA', 'question3')">MONTAGEM RUGADA</button>
+    </div>
+
+    <p id="result"></p>
+  </div>
+
+  <script>
+  const correctAnswers = {
+  'question3': 'SEM SAIDA'
+};
+
+function answer(value, question) {
+  if (correctAnswers[question] === value) {
+    alert('Правильно! 🌸');
+  } else {
+    alert('Неправильно 😅');
+  }
+}
+
+function playMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.play();
+  }
+}
+
+function pauseMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.pause();
+  }
+}
+
+</script>
+    
+</body>
+</html>

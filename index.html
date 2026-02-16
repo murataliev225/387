@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Что на картинке?</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="card">
+  <h1>Что на картинке?</h1>
+  <div class="image-box">
+    <img src="https://trends.24tv.ua/resources/photos/news/202202/1858093.jpg?v=1661256860000" alt="Дерево">
+  </div>
+
+  <div class="buttons">
+    <button onclick="answer('Дерево', 'question1')"><a href="home.html">Дерево</a></button>
+    <button onclick="answer('Дом', 'question1')">Дом</button>
+    <button onclick="answer('Человек', 'question1')">Человек</button>
+  </div>
+</div>
+
+<script>
+  const correctAnswers = {
+  'question1': 'Дерево',
+  'question2': 'LOUCURA LETAL',
+  'question3': 'SEM SAIDA'
+};
+
+function answer(value, question) {
+  if (correctAnswers[question] === value) {
+    alert('Правильно! 🌸');
+  } else {
+    alert('Неправильно 😅');
+  }
+}
+
+function playMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.play();
+  }
+}
+
+function pauseMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.pause();
+  }
+}
+
+</script>
+
+</body>
+</html>

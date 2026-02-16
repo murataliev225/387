@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="card1">
+  <h1 class="h12">ПОЗДРАВЛЯЮ</h1>
+  <p class="p12">
+    А ТЕПЕРЬ ПЕРЕЙДИ <br>
+    ПО ССЫЛКАМ И <br>
+    ПОДПИШИСЬ!
+  </p>
+</div>
+
+<div class="buttons1">
+      <button onclick="answer('Instagram', 'question4')">Instagram</button>
+      <button onclick="answer('Discord', 'question4')">Discord</button>
+      <button onclick="answer('TikTok', 'question4')">TikTok</button>
+</div> 
+
+<script>
+      const correctAnswers = {
+  'question4': 'TikTOk',
+};
+
+function answer(value, question) {
+  if (correctAnswers[question] === value) {
+    alert('Правильно! 🌸');
+  } else {
+    alert('Неправильно 😅');
+  }
+}
+
+function playMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.play();
+  }
+}
+
+function pauseMusic() {
+  const audio = document.getElementById("audio");
+  if (audio) {
+    audio.pause();
+  }
+}
+</script>
+</body>
+</html>
